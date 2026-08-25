@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -167,7 +168,7 @@ export default function MyPayments() {
               type="text"
               icon={<FilePdfOutlined className="text-red-500" />}
               onClick={() => {
-                const filename = record.proofOfPaymentUrl.split("/").pop();
+                const filename = record?.proofOfPaymentUrl?.split("/").pop() ?? "";
                 window.open(
                   `${import.meta.env.VITE_API_URL}/payments/proof/${filename}`,
                   "_blank"

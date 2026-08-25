@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import apiClient from '../lib/axios';
 import type { Stokvel, User, TrustScore } from '../types';
 
@@ -12,6 +13,7 @@ const mapUser = (backendUser: any): User => {
     firstName: backendUser.firstName || nameParts[0] || '',
     lastName: backendUser.lastName || nameParts.slice(1).join(' ') || '',
     email: backendUser.email,
+    cellNumber: backendUser.cellNumber,
     createdAt: backendUser.createdAt,
   };
 };

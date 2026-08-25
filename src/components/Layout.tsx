@@ -1,7 +1,6 @@
 import { Outlet, Link, useLocation } from 'react-router-dom';
 import { Layout as AntLayout, Button, Space, Menu } from 'antd';
 import {
-  HomeOutlined,
   PlusOutlined,
   TeamOutlined,
   DollarOutlined,
